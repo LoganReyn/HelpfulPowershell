@@ -1,5 +1,8 @@
-# function to download stuff 
-# 
+#
+# Logan Reynolds - 2025
+#
+
+
 
 function Install-Software {
 <#
@@ -58,8 +61,3 @@ function Install-Software {
         Write-Host "ERROR: [$_]"
     }
 }
-
-
-$firefox = "https://download.mozilla.org/?product=firefox-latest&os=win&lang=en-US"
-
-Install-Software -DownloadUrl $firefox -OutName "firefox-latest"
