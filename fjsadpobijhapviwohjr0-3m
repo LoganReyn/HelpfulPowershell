@@ -1,0 +1,32 @@
+$TITLE_FOR_SCREEN = " PowerShell ~ SatoriTEK "
+$HOST.UI.RawUI.WindowTitle = "$TITLE_FOR_SCREEN"
+
+# COLORS
+$Host.UI.RawUI.BackgroundColor = "Gray"  # Change to Black, DarkCyan, etc.
+$Host.UI.RawUI.ForegroundColor = "Blue"  # Bright color for text
+Clear-Host  # Refresh the terminal with new colors
+
+# LOGO
+Write-Host @" 
+$("#" * 75)
+  ______                        _ _______ _______ _        
+ / _____)        _             (_|_______|_______) |      
+( (____  _____ _| |_ ___   ____ _    _    _____  | |  _   
+ \____ \(____ (_   _) _ \ / ___) |  | |  |  ___) | |_/ )  
+ _____) ) ___ | | || |_| | |   | |  | |  | |_____|  _ (   
+(______/\_____|  \__)___/|_|   |_|  |_|  |_______)_| \_)  
+$("#" * 75)                                                                                                                                      
+"@ -ForegroundColor 'DarkGreen' 
+
+
+Write-Host @"
+$("-" * 75)
+# Session Start Time: $(Get-Date -Format "MM/dd/yyyy hh:mm:ss tt")
+#
+# Powershell Version: $($HOST.Version)
+#
+# Machine Name: $($env:COMPUTERNAME)
+#
+# (c) Logan Reynolds
+$("-" * 75)
+"@ -ForegroundColor 'Black'
